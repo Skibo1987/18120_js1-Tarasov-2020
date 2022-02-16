@@ -76,3 +76,25 @@ console.log(arr4.slice(2));
 // console.log(arr4.reverse());
 console.log(arr4.splice(2));
 console.log(arr4);
+
+console.clear;
+
+arr5 = [3,45,24,78,9,12];
+arr5.forEach(function(item){
+    console.log(item)
+});
+console.log(arr5);
+
+let arr6 = arr5.map(function(item, index, array){
+    console.log(item, index);
+    return item*2;
+});
+console.log(arr6);
+
+
+const n = 13;
+const fib = [0,1];
+for(let i=2; i<n; i++){
+    fib[i]= fib[i-1]+fib[i-2];
+}
+console.log(fib);
