@@ -57,30 +57,35 @@ class Math2 {
 console.log(Math2.isOdd(23));
 console.log(Math2.isOdd(56));
 
-
-
-class Goods{
-    constructor(title, price){
-        this.title = title;
-        this.price = price;
+class Goods {
+  constructor(title, price) {
+    this.title = title;
+    this.price = price;
+  }
+  show() {
+    for (let prop in this) {
+      console.log(`${prop}=${this[prop]}`);
     }
-    show(){
-        for(let prop in this){
-            console.log(`${prop}=${this[prop]}`)
-        }
-    }
+  }
 }
 
 class Phone extends Goods {
-    constructor(title,price){
-        super(title,price);
-        this.type='смартфон';
-    }
+  constructor(title, price) {
+    super(title, price);
+    this.type = "смартфон";
+  }
 }
 
 let goods = [];
-goods.push(new Goods('Смартфон 1', 45000));
-goods.push(new Goods('Смартфон 2', 95000));
-goods.push(new Phone('Смартфон 3', 5000));
+goods.push(new Goods("Смартфон 1", 45000));
+goods.push(new Goods("Смартфон 2", 95000));
+goods.push(new Phone("Смартфон 3", 5000));
 
-goods.forEach(item=>item.show());
+goods.forEach((item) => item.show());
+
+
+goods.push(new Goods("Смартфон 1", 45000));
+goods.push(new Goods("Смартфон 2", 95000));
+goods.push(new Phone("Смартфон 3", 5000));
+
+goods.forEach((item) => item.show());
